@@ -18,7 +18,7 @@ phonecatApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
             when('/searchbar', {
-                templateUrl: 'partials/searchbar.html',
+                templateUrl: '/partials/searchbar.html',
                 controller: 'PhoneListCtrl'
             }).
             /*when('/phones/:phoneId', {
