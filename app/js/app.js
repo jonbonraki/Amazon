@@ -26,6 +26,6 @@ phonecatApp.config(['$routeProvider',
                 controller: 'PhoneDetailCtrl'
             }).*/
             otherwise({
-                redirectTo: '/Suryasamazon'
+                redirectTo: '/searchbar'
             });
     }]);
