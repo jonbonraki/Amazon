@@ -5,32 +5,15 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var rimraf = require('rimraf');
 var browserSync = require('browser-sync').create();
-plugins.uglify = require('gulp-uglify');
-plugins.concat = require('gulp-concat');
-/*
-var paths = {
+var aws = require("aws-lib");
 
-    js: ['./app/js/!*.js', './app/js/!**!/!*.js'],
-partials:['./app/partials/!*.html', './app/partials/!**!/!*.html'],
-    dist: {
-        css: './public/css/',
-        js: './public/js/',
-partials:"./public/partials/'"
-    },
+/*var prodAdv = aws.createProdAdvClient(yourAccessKeyId, yourSecretAccessKey, yourAssociateTag);
 
-};
-*/
+var options = {SearchIndex: "Books", Keywords: "Javascript"}*/
 
-
-
-/*
-gulp.task('clean', function() {
-    rimraf.sync(paths.dist.css);
-    rimraf.sync(paths.dist.js);
-    rimraf.sync(paths.dist.partials);
-})
-*/
-
+/*/!*prodAdv.call("ItemSearch", options, function(err, result) {
+    console.log(result);*!/
+})*/
 gulp.task('serve', function() {
 
     browserSync.init({
@@ -39,7 +22,8 @@ gulp.task('serve', function() {
             routes: {
                 "/bower_components": "bower_components",
                 "/app/js":"app/js",
-                "/app/partials":"/app/partials"
+                "/app/partials":"/app/partials",
+                "/app/images":"/app/images"
             }
         }
 

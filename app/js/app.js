@@ -8,6 +8,7 @@
 var phonecatApp = angular.module('Amazonapp', [
     'ngRoute',
     //'phonecatAnimations',
+    'ui.bootstrap',
 
     'phonecatControllers',
   /*  /!*'phonecatFilters',
